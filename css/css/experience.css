@@ -1,0 +1,52 @@
+img {
+    border-radius: 100%;
+    box-shadow: 0 0 16pt 0 rgba(0, 0, 0, 0.2), 0 0 4pt 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+.description hr {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.left-description .image {
+    margin-right: 1.5em;
+}
+
+.description, .image {
+    display: inline-block;
+}
+
+.right-description .image {
+    margin-left: 1.5em;
+}
+
+.image {
+    width: 20%;
+    vertical-align: top;
+}
+
+.description {
+    width: 75%;
+    margin-top: -1.5em;
+}
+
+.image img {
+    width: 100%;
+}
+
+.left-description, .right-description {
+    margin-bottom: 3em;
+}
+
+.additional-info {
+    font-style: italic;
+    margin-top: -5px;
+}
+
+.header {
+    margin-bottom: 0px;
+}
+
+.period {
+    float: right;
+}

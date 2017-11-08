@@ -1,0 +1,16 @@
+.home-image img {
+    border-radius: 100%;
+    box-shadow: 0 0 16pt 0 rgba(0, 0, 0, 0.2), 0 0 4pt 0 rgba(0, 0, 0, 0.1) inset;
+    margin: 0px;
+    width: 25%;
+    vertical-align: top;
+    float: right;
+}
+
+.home-content {
+    width: 70%;
+}
+
+.home-content, .home-image img {
+        display: inline-block;
+}

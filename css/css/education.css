@@ -1,0 +1,66 @@
+img {
+    border-radius: 100%;
+    box-shadow: 0 0 16pt 0 rgba(0, 0, 0, 0.2), 0 0 4pt 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+.description-image img {
+    margin: 0px;
+    width: 100%;
+}
+
+.description-image {
+    width: 20%;
+    vertical-align: top;
+    padding-right: 2em;
+}
+
+.description-content {
+    width: 80%;
+    float: right;
+}
+
+.description-header {
+    margin-top:-1.5em;
+    
+}
+
+.description-header hr {
+    margin-top: 2em;
+    margin-bottom: 0.5em
+}
+
+.description {
+    margin-bottom: 2em;
+    width: 100%;
+    display: inline-block;
+}
+
+.description-content, .description-image {
+    display: inline-block;
+}
+
+.institution-name, .institution-place {
+    display: inline-block;
+}
+
+.additional-info {
+    font-style: italic;
+    float: right;
+    margin-top: 1.5em;
+    text-align: right;
+}
+
+.additional-awards li {
+    margin-top: 1.5em;
+}
+
+.additional-awards hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.award-description {
+    margin-top: -1em;
+    font-style: italic;
+    font-size: 11px;
+}
