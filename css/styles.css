@@ -1,0 +1,176 @@
+:root {
+    
+    --title-font: 'Fjalla One';
+    
+    --main-font: 'sans-serif';
+        
+    --big-font-size: 40px;
+    
+    --medium-font-size: 33px;
+    
+    --normal-font-size: 26px;
+    
+    --small-font-size: 20px;
+    
+    --black: #000000;
+    
+    --white: #FFFFFF;
+        
+    --blue: #17A2B8;
+    
+    --purple: #B300B3;
+}
+
+body {
+    font-family: var(--main-font);
+    font-size: var(--medium-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: var(--title-font);
+}
+
+li {
+    list-style: none;
+    
+    margin-bottom: 7px;
+    
+    font-size: var(--normal-font-size);
+}
+
+.h1-blue{
+    color: var(--blue);
+    
+    font-weight: bold;
+    
+    font-size: var(--big-font-size);
+    
+    text-transform: uppercase;
+}
+
+.h1-white{
+    color: var(--white);
+    
+    font-weight: bold;
+    
+    font-size: var(--big-font-size);
+    
+    text-transform: uppercase;
+}
+
+.h1-white-lowercase{
+    color: var(--white);
+    
+    font-weight: bold;
+    
+    font-size: var(--big-font-size);
+}
+
+.h3-blue-small {
+    color: var(--blue);
+    
+    font-weight: bold;
+    
+    font-size: var(--normal-font-size);
+}
+
+.h3-blue {
+    color: var(--blue);
+    
+    font-weight: bold;
+    
+    font-size: var(--medium-font-size);
+}
+
+.h3-blue-thin {
+    color: var(--blue);
+
+    font-size: var(--normal-font-size);
+}
+
+.p-white {
+    color: var(--white);
+}
+
+.p-normal {
+    font-size: var(--normal-font-size);
+}
+
+.p-credits {
+    font-size: var(--small-font-size);
+}
+
+.picture{
+    height: 300px;
+    width: 300px;
+}
+
+.picture-bottom {
+    margin-top:30px;
+    
+    height: 150px;
+}
+
+.img-bottom {
+
+    height:50%;
+    width:100%;
+}
+
+.no-padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.space-colored {
+    background-color: var(--blue);
+    
+    padding-top: 50px;
+    
+    padding-bottom: 30px;
+    
+    margin-bottom: 30px;
+}
+
+.small-container {
+    max-width: 1000px;
+    
+    max-height: 480px;
+    
+    margin: 0 auto;
+}
+
+.project-element {
+    width:450px;
+    
+    height:510px;
+    
+    margin-bottom: 30px;
+}
+
+.icon-list {
+    width: 75px;
+    
+    height: 75px;
+    
+    margin-bottom: 15px;
+}
+
+.line {
+    display: block;
+    
+    height: 1px;
+    
+    border: 0;
+    
+    border-top: 1px solid #CCC;
+    
+    margin: 1em 0;
+    
+    padding: 0;
+}
