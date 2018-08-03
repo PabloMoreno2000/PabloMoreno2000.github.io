@@ -174,3 +174,10 @@ li {
     
     padding: 0;
 }
+
+
+#project-img-carousel {
+    width: 500px;
+    
+    height: 550px;
+}
