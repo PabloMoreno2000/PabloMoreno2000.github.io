@@ -175,6 +175,18 @@ li {
     padding: 0;
 }
 
+.border {
+    border-style: solid;
+}
+
+.upper-right-corner {
+    position: absolute;
+    
+    top: 0;
+    
+    right: 0%
+}
+
 
 #project-img-carousel {
     width: 500px;

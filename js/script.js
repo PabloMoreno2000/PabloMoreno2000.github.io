@@ -12,25 +12,34 @@ var iExergyImg;
 var iPerceptronImg;
 
 //Variable to store the div projects when needed 
+var divPreviews = "";
+
+//Var to store the individual project data
 var divProject = "";
+
+var iNumber;
 
 $(document).ready(function(){
     
+//Detach the project container
+divProject = $("#project-area").detach();
+       
 //Counting the projects that are finished
 getProjectsFinished();
     
 //Get the names of all the projects finished
 getProjectNames();
-    
-//Count the number of projects that are ready
 
-//If the user presses a buton  to show the project              
-$(".btn").click(function(){
+//If the user presses a button to show the project              
+$(".project-btn").click(function(){
     
-let iNumber = this.value();
+ iNumber = parseInt($(this).attr('value'));
     
-//Clean the project's div
+//detach the project's div
 cleanProjects();
+
+    
+console.log(iNumber);
     
 //show the info of that option
 switch(iNumber){
@@ -56,17 +65,24 @@ switch(iNumber){
         break;
 }
     
-});            
+});  
     
-
-                
+ //Listener of the click event of the cross symbol   
+$(".cross").click(function(){
+     console.log("ALAER");
+     cleanPreview();
+    
+   
+    
+});
+    
 });
 
 //Function to get the project names
 var getProjectNames = () => {
     
     //"i" is the position, obj is the actual DOM
-    $('.card-title').each(i, obj) {
+    $("card-title").each(function(i, obj) {
         
         //Just get the names of the ones that are finished
         if(i != fullProjects - 1) {
@@ -74,13 +90,13 @@ var getProjectNames = () => {
         //"this" points to obj
         projectNames[i] = this.html();
         }
-    }
+    });
 }
 
 //Function to get the number of projects finished
 var getProjectsFinished = () => {
     
-    $('card-title').each(i, obj) {
+    $("card-title").each(function(i, obj) {
         
         //If the title project states that it is finished
         if(obj.hasClass("project-ready")) {
@@ -88,11 +104,23 @@ var getProjectsFinished = () => {
             //Count them
             fullProjects++;   
         }
-    }
+    });
 }
 
-//Function to clean the projects div
+//Function to clean the projects div and show just one
 var cleanProjects = () => {
     
+    divPreviews = $(".projects-container").detach();
     
+    $("#pre-project-area").append(divProject);
+    
+}
+
+var cleanPreview =  () => {
+    
+    //Detach the info of the single project
+    divProject = $("#project-area").detach();
+    
+    //attach all the projects preview
+    $(".pre-projects-container").append(divPreviews);
 }
