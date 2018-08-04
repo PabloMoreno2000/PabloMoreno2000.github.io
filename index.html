@@ -113,29 +113,9 @@
         
     </div>
     
-
-        
-        <div class = "line" style = "margin-top: 150px"></div>
-        
-        <div class = "container text-center">
-            
-        <h3 class = "h3-blue-thin">Special thanks to (...), for (...):</h3>
-            
-            <ul>
-                <p class = "p-credits"> <a href = "https://www.iconfinder.com/webhostingmedia">David Cross</a>
-                for Mobile development icon.</p>
-            </ul>
-            
-            <ul>
-                <p class = "p-credits"> <a href = "https://www.iconfinder.com/justicon">Just Icon</a>
-                for<a href = "https://www.iconfinder.com/icons/3213308/code_computer_develop_development_web_icon"> Web development icon</a> that has the <a href = "https://creativecommons.org/licenses/by/3.0/">	Creative Commons (Attribution 3.0 Unported) license </a>.</p>
-            </ul>
-            
-        </div>
-    
     <div class = "small-container container-fluid pre-projects-container" style="margin-top: 120px">
         
-        <h1 class="h1-blue text-center" >Important Projects</h1>
+        <h1 class="h1-blue text-center project-title" >Important Projects</h1>
         
         <div class = "projects-container">
         
@@ -147,7 +127,7 @@
             
             <div class = "card-body">
             
-                <div class ="card-title project-ready"><h3 class = "h3-blue">Gerstapp</h3></div>
+                <div class ="card-title project-ready"><h3 class = "h3-blue card-title-word">Gerstapp</h3></div>
                 
                 <div class = "card-text"><p class = "p-normal">App that helps students to learn what they exactly need from german to get good grades.</p></div>
                 
@@ -163,7 +143,7 @@
             
             <div class = "card-body">
             
-                <div class ="card-title project-ready"><h3 class = "h3-blue">Exergy</h3></div>
+                <div class ="card-title project-ready"><h3 class = "h3-blue card-title-word">Exergy</h3></div>
                 
                 <div class = "card-text"><p class = "p-normal">You wake up as a cyborg without memory, lost and trapped in Ganymede, a Jupiter's moon.</p></div>
                 
@@ -183,7 +163,7 @@
 
                 <div class = "card-body">
 
-                    <div class ="card-title project-ready"><h3 class = "h3-blue">Perceptron</h3></div>
+                    <div class ="card-title project-ready"><h3 class = "h3-blue card-title-word">Perceptron</h3></div>
 
                     <div class = "card-text"><p class = "p-normal">Neraul network that generates a criterion through experience and error measurement.</p></div>
 
@@ -199,7 +179,7 @@
 
                 <div class = "card-body">
 
-                    <span class ="card-title project-in-development d-flex align-items-end">
+                    <span class ="card-title project-in-development card-title-word d-flex align-items-end">
                         <h3 class = "h3-blue">VR Project</h3>
                         <h3 class = "h3-blue-small">(in development)</h3>
                     </span>
@@ -217,9 +197,11 @@
         
         <div class = "container col-8 offset-2 text-center border" id = "project-area">
 
-            <button type = "button" class = "cross btn btn-info upper-right-corner" role = "button">
+            <div class ="btn-cross">
+            <button type = "button" class = "cross btn btn-info upper-right-corner" role = "button" id = "cross">
                 <i class="fas fa-times-circle" ></i>
             </button>
+            </div>
             <p class = "p-normal" id = "project-description">Im the description of the project a fsd fsd fasd fasd fasdfasd fasd fdas</p>
 
             <img id = "project-img-carousel" src = "img/competitive.png">
@@ -227,18 +209,16 @@
             <div class = "row ">
 
                 <div class = "offset-3">
+                
+                <span class = "btn-left">
+                <button type = "button" class = "left-arrow-carousel btn btn-info" role = "button"><i class = "fas fa-arrow-left"></i></button>
+                </span>
+                    
+                <span class = "circles"></span>
 
-                <button type = "button" class = "btn btn-info" id = "left-arrow-carousel" role = "button"><i class = "fas fa-arrow-left"></i></button>
-
-                <i class="far fa-circle" style = "font-weight: 900" ></i>
-
-                <i class="far fa-circle"></i>
-
-                <i class="far fa-circle"></i>
-
-
-                <button type = "button" class = "btn btn-info" id = "right-arrow-carousel" role = "button"><i class = "fas fa-arrow-right"></i></button>
-
+                <span class = "btn-right">
+                <button type = "button" class = "right-arrow-carousel btn btn-info" role = "button"><i class = "fas fa-arrow-right"></i></button>
+                </span>
                 </div>
 
             </div>
@@ -248,9 +228,29 @@
         </div>
         
     </div>
+        
+
 
 </div>
+    
+        <div class = "line" style = "margin-top: 750px"></div>
         
+        <div class = "container text-center">
+            
+        <h3 class = "h3-blue-thin">Special thanks to (...), for (...):</h3>
+            
+            <ul>
+                <p class = "p-credits"> <a href = "https://www.iconfinder.com/webhostingmedia">David Cross</a>
+                for Mobile development icon.</p>
+            </ul>
+            
+            <ul>
+                <p class = "p-credits"> <a href = "https://www.iconfinder.com/justicon">Just Icon</a>
+                for<a href = "https://www.iconfinder.com/icons/3213308/code_computer_develop_development_web_icon"> Web development icon</a> that has the <a href = "https://creativecommons.org/licenses/by/3.0/">	Creative Commons (Attribution 3.0 Unported) license </a>.</p>
+            </ul>
+            
+        </div>
+          
     </div>    
     
     <!--Scripts-->
