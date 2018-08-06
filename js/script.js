@@ -1,15 +1,18 @@
+//Var to get and store the projects' names written in the HTML
 var projectNames = ["", "", ""];
 
+//Counter of the finished projects
 var fullProjects = 0;
 
-var gerstappDescription = "Made by my own initiative, Gerstapp is a mobile app that allows students to add their own vocabulary and verbs in order to practice. It also helps to practice other elements of this language like possessive pronouns, defined artciles, undefined articles, etc; in all their variations (nominative, dative, genitive).";
+var gerstappDescription = "Made by own initiative, Gerstapp is a mobile app that allows students to add their own vocabulary and verbs in order to practice. It also helps to practice other elements of this language like possessive pronouns, defined artciles, undefined articles, etc; in all their variations (nominative, dative, genitive).";
 
 var exergyDescription = "A metroidvania game made with Game maker with a very deep story and a funny playability. Everything, the scripts, sprites, music, game physics, etc. was made by our team.";
 
-var perceptronDescription = "A type of neural network that generates a criterion through experience and error measurement.";
+var perceptronDescription = "Made by own initiative, it is a type of neural network that generates a criterion through experience and error measurement.";
 
 var descriptions = [gerstappDescription, exergyDescription, perceptronDescription];
 
+//Gerstapp Bullets
 var gerstappBullet0 = "You can choose between several options.";
 
 var gerstappBullet1 = "Each option has some games to interact with.";
@@ -34,6 +37,7 @@ var gerstappBullet10 = "This is what you will see after selecting the picture of
 
 var gerstappBullets = [gerstappBullet0, gerstappBullet1, gerstappBullet2, gerstappBullet3, gerstappBullet4, gerstappBullet5, gerstappBullet6, gerstappBullet7, gerstappBullet8, gerstappBullet9, gerstappBullet10];
 
+//Exergy Bullets
 var exergyBullet0 = "Everything, the scripts, sprites, music, game physics, etc. was made by our team.";
 
 var exergyBullet1 = "There is a saving system and enemies that will follow/shoot you.";
@@ -42,6 +46,13 @@ var exergyBullet2 = "You will find traps around the whole map. Be careful.";
 
 var exergyBullets = [exergyBullet0, exergyBullet1, exergyBullet2];
 
+//Perceptron Bullets
+var perceptronBullet0 = "The project is available on github.";
+
+var perceptronBullet1 = "All the code written in C++";
+
+var perceptronBullets = [perceptronBullet0, perceptronBullet1];
+
 //Number of images of the Gerstapp project
 var iGerstappImg = 11;
 
@@ -49,7 +60,7 @@ var iGerstappImg = 11;
 var iExergyImg = 3;
 
 //Number of images of the perceptron project
-var iPerceptronImg;
+var iPerceptronImg = 2;
 
 //var to store the current dot of the carousel
 var iCurrentDot = 0;
@@ -63,12 +74,14 @@ var divPreviews = "";
 //Var to store the individual project data
 var divProject = "";
 
+//Var to store the value the value of the pressed button
 var iNumber;
 
 $(document).ready(function(){
     
-//These two lines are also necessary to avoid a bug 
+//These two code lines are also necessary to avoid a bug 
 divProject = $("#project-area").detach();
+    
 $("#pre-project-area").append(divProject);
     
 //Counting the projects that are finished
@@ -78,129 +91,140 @@ getProjectsFinished();
 getProjectNames();
 
 //If the user presses a button to show the project              
-$(".project-btn").click(function(){
+$(".project-btn").click(function() {
     
- iNumber = parseInt($(this).attr('value'));
-    
-//detach the project's div
-divPreviews = $(".projects-container").detach();
-$("#pre-project-area").append(divProject);
-//cleanProjects();
-    
-console.log(iNumber);
-    
+    iNumber = parseInt($(this).attr('value'));
+
+    //detach the project's div and putting the big "preview"
+    cleanProjects();
+
     //Change the title
     $(".project-title").html("" + projectNames[iNumber]);
-    
+
     //Loading the project's description
     $("#project-description").html(descriptions[iNumber]);
-    
-//show the info of that option
-switch(iNumber){
-    //Gerstapp case
-    case 0:
-        
-        iMaxDot = iGerstappImg;
-        
-        //console.log("title: " + projectNames[iNumber]);
-        
-        //load the Gerstapp info
-        
-        //Loading dots
-        loadDots(iGerstappImg);
-        
-        changeDot(iCurrentDot);
-        
-        loadGerstappImg();
-        
-        $("#bullet-info").html(gerstappBullets[iCurrentDot]);
-        
-        break;
-        
-    //Exergy case
-    case 1:
-        
-        iMaxDot = iExergyImg;
-        
-        //load the Exerygy info
-        
-                //Loading dots
-        loadDots(iExergyImg);
-        
-        changeDot(iCurrentDot);
-        
-        loadExergyImg();
-        
-        $("#bullet-info").html(exergyBullets[iCurrentDot]);
-        
-        
-        break;
-        
-    //Perceptron case
-    case 2:
-        
-        iMaxDot = iPerceptronImg;
-        
-        //load the perceptron info
-        
-        break;
-}
+
+    //show the info of that option
+    switch(iNumber) {
+            
+        //Gerstapp case
+        case 0:
+
+            iMaxDot = iGerstappImg;
+
+            //Loading dots
+            loadDots(iGerstappImg);
+
+            changeDot(iCurrentDot);
+
+            //load the Gerstapp info
+            loadGerstappImg();
+
+            $("#bullet-info").html(gerstappBullets[iCurrentDot]);
+
+            break;
+
+        //Exergy case
+        case 1:
+
+            iMaxDot = iExergyImg;
+
+            //Loading dots
+            loadDots(iExergyImg);
+
+            changeDot(iCurrentDot);
+
+            //load the Exerygy info
+            loadExergyImg();
+
+            $("#bullet-info").html(exergyBullets[iCurrentDot]);
+
+            break;
+
+        //Perceptron case
+        case 2:
+
+            iMaxDot = iPerceptronImg;
+
+            //Loading dots
+            loadDots(iPerceptronImg);
+
+            changeDot(iCurrentDot);
+
+            //load the perceptron info
+            loadPerceptronImg();
+
+            $("#bullet-info").html(perceptronBullets[iCurrentDot]);
+
+            break;
+            
+    }
     
 });  
     
     $(".btn-left").on('click', ".left-arrow-carousel", function () {
     
-    var iPreviousDot = iCurrentDot;
-        
-    iCurrentDot--;
-    
-    //Subtract 1 since we will be working with index
-    if(iCurrentDot < 0) {
-        iCurrentDot = iMaxDot - 1; 
-    }
-    
-    changeDot(iCurrentDot, iPreviousDot);
-        
-    switch(iNumber){
-    //Gerstapp case
-    case 0:
-            
-        loadGerstappImg();
-            
-        $("#bullet-info").html(gerstappBullets[iCurrentDot]);
-        
-        break;
-        
-    //Exergy case
-    case 1:
-            
-            loadExergyImg();
-            
-            $("#bullet-info").html(exergyBullets[iCurrentDot]);
+        var iPreviousDot = iCurrentDot;
 
-        break;
-        
-    //Perceptron case
-    case 2:
-        
-        break;
-    }
+        iCurrentDot--;
+
+        //Subtract 1 since we will be working with index
+        if(iCurrentDot < 0) {
+            
+            iCurrentDot = iMaxDot - 1; 
+            
+        }
+
+        changeDot(iCurrentDot, iPreviousDot);
+
+        switch(iNumber){
+                
+        //Gerstapp case
+        case 0:
+
+            loadGerstappImg();
+
+            $("#bullet-info").html(gerstappBullets[iCurrentDot]);
+
+            break;
+
+        //Exergy case
+        case 1:
+
+                loadExergyImg();
+
+                $("#bullet-info").html(exergyBullets[iCurrentDot]);
+
+            break;
+
+        //Perceptron case
+        case 2:
+                loadPerceptronImg();
+                
+                $("#bullet-info").html(perceptronBullets[iCurrentDot]);
+
+            break;
+                
+        }
     
 });
     
 $(".btn-right").on('click', ".right-arrow-carousel", function () {
-    
+
     var iPreviousDot = iCurrentDot;
     
     iCurrentDot++;
     
     if(iCurrentDot > iMaxDot - 1) {
+        
         iCurrentDot = 0;
+        
     }
     
     changeDot(iCurrentDot, iPreviousDot);
     
     switch(iNumber){
+            
     //Gerstapp case
     case 0:
             
@@ -221,37 +245,29 @@ $(".btn-right").on('click', ".right-arrow-carousel", function () {
         
     //Perceptron case
     case 2:
+            
+            loadPerceptronImg();
+            
+            $("#bullet-info").html(perceptronBullets[iCurrentDot]);
         
         break;
     }
-    
     
 });
     
 //Listener of the click event of the cross symbol   
 $(".btn-cross").on('click', ".cross", function (){
     
-    $(".pre-projects-container").append(divPreviews);
+    //Reseting the dot counter
+    iCurrentDot = 0;
     
-    divProject = $("#project-area").detach();
-    
-    $(".project-title").html("Important Projects");
-    
-     console.log("ALAER");
-    
-     //cleanPreview();
-    
-   
+     cleanPreview();
     
 });
     //This is necessary for the page to work
     $('#cross').trigger('click');
     
-    
-
-    
 });
-
 
 //Function to get the project names
 var getProjectNames = () => {
@@ -267,6 +283,7 @@ var getProjectNames = () => {
         
         }
     });
+    
 }
 
 //Function to get the number of projects finished
@@ -282,25 +299,28 @@ var getProjectsFinished = () => {
         }
     });
     
-    console.log("FullProjects: " + fullProjects);
 }
 
 //Function to clean the projects div and show just one
 var cleanProjects = () => {
     
     divPreviews = $(".projects-container").detach();
-    
+
     $("#pre-project-area").append(divProject);
     
 }
 
+//Function the change the page's view
 var cleanPreview =  () => {
     
-    //Detach the info of the single project
+    //Showing the previews
+    $(".pre-projects-container").append(divPreviews);
+    
+    //Hiding the big project
     divProject = $("#project-area").detach();
     
-    //attach all the projects preview
-    $(".pre-projects-container").append(divPreviews);
+    //Changing the title
+    $(".project-title").html("Important Projects");
 }
 
 var loadGerstappImg = () => {
@@ -322,7 +342,9 @@ var loadExergyImg = () => {
 
 var loadPerceptronImg = () => {
     
+    let src = "img/perceptron/" + iCurrentDot + ".jpg";
     
+    $("#project-img-carousel").attr("src", src);
 }
 
 var loadDots = (dots) => {
@@ -339,23 +361,23 @@ var loadDots = (dots) => {
 //function to change the solid dot
 var changeDot = (dotSelected, previous) => {
     
-    console.log("Previous: " + previous);
-    
-    console.log("dotSelected: " + dotSelected);
-    
     //looping through all the dots
     $(".fa-circle").each(function(i, obj) {
         
         //When you find the wanted dot
         if(i === dotSelected){
+            
             //change the style
             $(this).css("font-weight", "900");
+            
             }
         
         else if(i === previous) {
             
             $(this).css("font-weight", "");
+            
         }
         
     });
+    
 }

@@ -175,6 +175,13 @@ li {
     padding: 0;
 }
 
+.line-container {
+    
+    position: relative;
+    
+    top: 315px;
+}
+
 .border {
     border-style: solid;
 }
