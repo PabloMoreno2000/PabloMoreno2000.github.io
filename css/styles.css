@@ -95,6 +95,8 @@ li {
 
 .p-white {
     color: var(--white);
+    
+    font-size: var(--small-font-size);
 }
 
 .p-normal {
@@ -179,7 +181,7 @@ li {
     
     position: relative;
     
-    top: 315px;
+    top: 1900px;
 }
 
 .border {
